@@ -1,4 +1,5 @@
-# CrudUsuario
+CRUD de Usuário
+Este projeto é uma aplicação web desenvolvida em Angular 18, que permite gerenciar usuários de forma simples e eficaz. Com funcionalidades de criação, leitura, atualização e exclusão (CRUD), os usuários podem ser facilmente manipulados através de uma interface intuitiva. O sistema também utiliza uma API REST para interagir com um banco de dados, garantindo uma experiência fluida e dinâmica. Ideal para aprendizado e desenvolvimento de habilidades em programação, este projeto serve como base para futuros aprimoramentos e integrações.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
