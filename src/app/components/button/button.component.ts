@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  @Input() textButton: string='';
-  @Input() size: string= 'auto';
+  @Input() textButton: string;
+  @Input() size:string;
 
 
 }

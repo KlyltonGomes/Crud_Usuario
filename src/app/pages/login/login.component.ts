@@ -13,13 +13,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-textButton: any;
+textButton: string;
 userName: string;
 
-constructor(private rota: Router){
-
-}
-
+constructor(private rota: Router){}
 
 login(){
   sessionStorage.setItem('user', this.userName);
