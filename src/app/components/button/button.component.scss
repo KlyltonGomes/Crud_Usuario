@@ -1,11 +1,11 @@
 .botao-primario{
     
     width: auto;
-    display: inline-block; /* Evita que o botão encolha */
+    display: inline-block;
     outline: none;
     border: 0;
     background: #7533a8;
-    color: #fff;
+    color: #ffffff;
     font-weight: 400;
     font-size: 16px;
     padding: 6px 20px;
@@ -18,8 +18,4 @@
     }
 
     &:disabled{cursor: default; opacity: 0.7;}
-}
-.w-100{
-
-    width: 100%;
 }

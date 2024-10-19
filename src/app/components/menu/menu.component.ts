@@ -29,7 +29,16 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 })
 export class MenuComponent {
 showFiller: any;
-
 @Input() size: string= '100';
+
+userName: string;
+
+constructor(){ }
+
+ngOnInit(){
+  this.userName = sessionStorage.getItem('user') || '';
+}
+
+
 
 }

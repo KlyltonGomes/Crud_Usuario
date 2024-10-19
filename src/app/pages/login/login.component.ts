@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { ButtonComponent } from "../../components/button/button.component";
 import { Router, RouterOutlet } from '@angular/router';
 import { NgClass } from '@angular/common';
@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
 textButton: string;
 userName: string;
+
 
 constructor(private rota: Router){}
 

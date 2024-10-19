@@ -1,14 +1,17 @@
-.area-login-background{
+.area-login-background {
     height: 100%;
     width: 55%;
     display: block;
     float: left;
-    background-image: url(../../../assets/img/background-login.png);
-    background-color: var(--primary-color);
-    background-size: 100% auto;
+    background-image: 
+        linear-gradient(rgba(117, 51, 168, 0.8), rgba(21, 19, 159, 0.8)), /* Degradê com opacidade */
+        url(../../../assets/img/background-login.png); /* Imagem de fundo */
+    background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-color: var(--primary-color);
 }
+
 
 .area-form{
     height: 100%;
@@ -48,7 +51,7 @@
     width: 100%;
     border-radius: 4px;
     border: 1px solid #00000000;
-    margin-bottom: 32px;
+    margin-bottom: 35px;
     transition: 0.3 linear all;
     box-shadow: 
     inset 1px 1px 2px #aaadb980,
@@ -56,9 +59,10 @@
 
     &:focus{border: 1px solid var(--primary-color);}
 }
-    
+
 .footer{
     position: absolute;
+    text-align: center;
     bottom: 4px;
     font-size: 10px;
     color: var(--primary-color);
