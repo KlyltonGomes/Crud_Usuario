@@ -1,0 +1,103 @@
+<mat-drawer-container class="example-container" autosize >
+
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <img class="imagem-logo" src="../../../assets/img/logo.png" width="40px">
+      <span class="logo">CRUD USUARIO</span>
+  
+  
+      <ul>
+        <li routerLink="/home"> <mat-icon>home</mat-icon> home </li>
+        <li routerLink="/crud"> <mat-icon>person_add</mat-icon> Cadastrar Usuarios </li>
+        <a href="" target="_blank">
+          <li><mat-icon>local_fire_department</mat-icon> Firebase </li>
+        </a>
+        <a href="" target="_blank">
+          <li><mat-icon>description</mat-icon> Angular </li>
+        </a>
+        <li routerLink="/login" class="logout"> <mat-icon>logout</mat-icon> Sair </li>
+  
+      </ul>
+  
+    </mat-drawer>
+  
+    <div class="example-sidenav-content" style="position: fixed;">
+  
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon>menu_open</mat-icon>
+  
+      </button>
+  
+    </div>
+
+    <!--container do filtro e button-->
+    <div class="container-fluid pt-3">
+      <div class="row mt-2"  >
+          <div class="card-info" >
+            <div class="row" >
+              <div class="col-12 col-xl mx-2" style="background-color: rgba(113, 160, 160, 0.328);">
+                <h1 class="titulo" > Cadastrar Usuarios</h1>
+                <h3 class=" subtitulo"> Gerencie usuarios adicionandos,editando ou excluindo-os</h3>
+
+                <div class="button-container" >
+                <mat-form-field >
+                    <mat-label>Filter</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+                </mat-form-field>
+                
+                    <app-button textButton="+ Cadastrar" routerLink="/crud"></app-button>
+                </div>
+                
+              </div>
+            </div>
+            <div class="row" style="background-color: aquamarine;">
+
+            </div>
+        </div>
+    </div>
+<!-- container da table-->
+    <div class="container-fluid pt-3">
+        <div class="row mt-2">
+            <div class="card-info">
+                <div class="row">
+                    <table mat-table [dataSource]="dataSource" matSort>
+                  
+                        <!-- ID Column -->
+                        <ng-container matColumnDef="id">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                          <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                        </ng-container>
+                    
+                        <!-- Progress Column -->
+                        <ng-container matColumnDef="progress">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> Cargo </th>
+                          <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
+                        </ng-container>
+                    
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+                          <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                        </ng-container>
+                    
+                        <!-- Fruit Column -->
+                        <ng-container matColumnDef="fruit">
+                          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                          <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+                        </ng-container>
+                    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    
+                        <!-- Row shown when there is no matching data. -->
+                        <tr class="mat-row" *matNoDataRow>
+                          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                        </tr>
+                      </table>
+                    
+                      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</mat-drawer-container>

@@ -1,0 +1,108 @@
+.example-container {
+    width: auto;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    background-image: 
+    linear-gradient(rgba(242, 241, 244, 0.888), rgba(255, 255, 255, 0.815)), /* Degradê com opacidade */
+    url(../../../assets/img/background-login.png); /* Imagem de fundo */
+background-size: cover; /* A imagem cobrirá toda a área */
+background-position: center; /* Centraliza a imagem */
+background-repeat: no-repeat; /* Evita repetição da imagem */
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 1px;
+    align-items: left;
+    justify-content: left;
+    transition: 0.3s linear all;
+    &:hover{
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+    
+  }
+  
+  .example-sidenav {
+    width: 210px;
+   
+    min-height: 100vh;
+    display: block;
+    float: left;
+    padding: 10px 0px;
+    box-shadow: 4px 0px 10px 4px #0a0a0a40;
+    margin-right: 16px;
+    //background-color: var(--primary-color);
+    background-image: 
+        linear-gradient(rgba(117, 51, 168, 0.8), rgba(21, 19, 159, 0.8)), /* Degradê com opacidade */
+        url(../../../assets/img/background-login.png); /* Imagem de fundo */
+    background-size: cover; /* A imagem cobrirá toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+
+  }
+  .logo{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+  .imagem-logo{
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+
+li{
+    font-size: 14px;
+    font-weight: 50px;
+    padding: 7px 12px;
+    margin: 0;
+    display: flex;
+    color:rgb(253, 253, 253);
+    list-style-type: none;
+    align-items: center;
+    justify-content: left;
+
+    mat-icon{ margin-right: 10px; font-size:22px ;}
+    &:hover{
+        background: #f3f3f3;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+}
+
+
+a{text-decoration: none;}
+.logout{
+    position: absolute;
+    bottom: 0;
+   width: 177px;
+
+}
+
+//header crud main
+.titulo{
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.subtitulo{
+  font-size: 20px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.button-container{
+  
+  display: flex;   
+  margin-bottom: -15px;      
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+@media (max-width: 768px) { 
+  .button-container {
+    justify-content: center; 
+  }
+}
