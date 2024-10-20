@@ -12,7 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
 export class ButtonComponent {
   @Input() size:string;
   @Input() textButton!: string;
-  @Input() iconeName?: string;
-  @Input() routerLink?: string;
+ 
 
 }

@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Criar usuario</h1>
+
+<div mat-dialog-content>
+  
+  <div class="container-form">
+    <form >
+    
+      <h6>Nome</h6>
+      <input [(ngModel)]="nome" name="userName" class="input_form" type="text" placeholder="nome" >
+      <h6>Cargo</h6>
+      <input [(ngModel)]="cargo" name="userCargo" class="input_form" type="text" placeholder="cargo" >
+      <h6>Email</h6>
+      <input [(ngModel)]="email" name="userEmail" class="input_form" type="text" placeholder="email" >
+
+
+ </form>
+
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+  <button mat-button [mat-dialog-close]="true">Confirma</button>
+</div>
